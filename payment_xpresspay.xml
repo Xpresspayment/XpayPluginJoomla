@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.1" method="upgrade" type="plugin" group="j2store">
+	<name>XPRESS PAY</name>
+	<version>1.0.0</version>
+	<creationDate>Nov 2021</creationDate>
+	<author>Xpress Payment Solution</author>
+	<authorUrl>XpressPaymentSolutions.com</authorUrl>
+	<description>PLG_j2store_XPRESSPAY_XML_DESCRIPTION</description>
+	<license>GNU General Public License version 3 or later; see LICENSE</license>
+	<languages>
+		<language tag="en-GB">en-GB.plg_j2store_payment_xpresspay.ini</language>
+		<language tag="en-GB">en-GB.plg_j2store_payment_xpresspay.sys.ini</language>
+	</languages>
+	<files>
+		<filename plugin="payment_xpresspay">payment_xpresspay.php</filename>
+		<filename>index.html</filename>
+		<folder>images</folder>
+		<folder>payment_xpresspay</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="ppdp_test_public_key" type="text" size="80" class="input-xxlarge"
+						label="COM_XPRESSPAY_TEST_PUBLIC_KEY"
+						description="COM_XPRESSPAY_TEST_PUBLIC_KEY_DESC"
+						default=""/>
+				<!--<field name="ppdp_test_secret_key" type="text" size="80" class="input-xxlarge"
+						label="COM_XPRESSPAY_TEST_SECRET_KEY"
+						description="COM_XPRESSPAY_TEST_SECRET_KEY_DESC"
+						default=""/> -->
+				<field name="ppdp_live_public_key" type="text" size="80" class="input-xxlarge"
+								label="COM_XPRESSPAY_LIVE_PUBLIC_KEY"
+								description="COM_XPRESSPAY_LIVE_PUBLIC_KEY_DESC"
+								default=""/>
+				<!--<field name="ppdp_live_secret_key" type="text" size="80" class="input-xxlarge"
+								label="COM_XPRESSPAY_LIVE_SECRET_KEY"
+								description="COM_XPRESSPAY_LIVE_SECRET_KEY_DESC"
+								default=""/> -->
+				<field name="ppdp_test_mode" type="list" label="COM_XPRESSPAY_PAYMENT_MODE" description="COM_XPRESSPAY_PAYMENT_MODE_DESC">
+								<option value="0">Test Mode</option>
+								<option value="1">Live Mode</option>
+				</field>
+				<field type="spacer" />
+				<field name="XPRESSPAY_extra_yes_no" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_XPRESSPAY_EXTRA_YESNO" description="COM_XPRESSPAY_EXTRA_YESNO_DESC">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field type="spacer" />
+				<!--<field name="XPRESSPAY_extra_type" type="radio" class="btn-group btn-group-yesno" default="0" label="COM_XPRESSPAY_EXTRA_TYPE" description="COM_XPRESSPAY_EXTRACHARGESDESC">
+					<option value="0">Percentage</option>
+					<option value="1">Fixed Amount</option>
+				</field>
+				<field type="spacer" /> 
+				<field type="text" name="XPRESSPAY_extra_charges_value" description="COM_XPRESSPAY_EXTRACHARGE_VALUEDESC" default="1.5" label="COM_XPRESSPAY_EXTRA_VALUE" size="30"/> -->
+		<!--		<field type="spacer" />
+				<field type="text" name="XPRESSPAY_currcode" description="COM_XPRESSPAY_CURR_DESC" default="NGN" label="COM_PAYSTACKPAY_CURR" size="3" /> -->
+			</fieldset>
+		</fields>
+	</config>
+</extension>
